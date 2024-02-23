@@ -234,7 +234,14 @@
         line-height: var(--space--3);
       }
 
-      header > .date {
+      header > .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header > .top > .date {
         font-size: 14px;
         font-weight: bold;
       }
@@ -250,6 +257,10 @@
         padding-top: var(--space--2);
         padding-bottom: var(--space--3);
         border-bottom: var(--border);
+      }
+
+      section > p {
+        padding-bottom: var(--space--2);
       }
 
       /* ---------------- [ HEADER NAV ] ---------------- */
@@ -383,7 +394,10 @@
     <!-- Header Section -->
     <header>
       <!-- Main Header Text -->
-      <p class="date">Sun Feb 11 2024 17:00:00 GMT-0700 (Mountain Standard Time)</p>
+      <div class="top">
+        <p class="date">Feb 11, 2024</p>
+        <a href="#">All Posts</a>
+      </div>
       <h1>Markdown Kitchen Sink</h1>
       <p class="intro">This is a &quot;kitchen sink&quot; example that highlights all aspects of Markdown syntax.</p>
     </header>

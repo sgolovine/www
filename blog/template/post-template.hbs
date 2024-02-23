@@ -234,7 +234,14 @@
         line-height: var(--space--3);
       }
 
-      header > .date {
+      header > .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      header > .top > .date {
         font-size: 14px;
         font-weight: bold;
       }
@@ -250,6 +257,10 @@
         padding-top: var(--space--2);
         padding-bottom: var(--space--3);
         border-bottom: var(--border);
+      }
+
+      section > p {
+        padding-bottom: var(--space--2);
       }
 
       /* ---------------- [ HEADER NAV ] ---------------- */
@@ -383,7 +394,10 @@
     <!-- Header Section -->
     <header>
       <!-- Main Header Text -->
-      <p class="date">{{date}}</p>
+      <div class="top">
+        <p class="date">{{date}}</p>
+        <a href="#">All Posts</a>
+      </div>
       <h1>{{title}}</h1>
       <p class="intro">{{description}}</p>
     </header>

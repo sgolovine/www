@@ -3,10 +3,10 @@
   <head>
     <!-- Meta Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
+    <!-- <meta
       name="description"
-      content="This is a basic markdown test post"
-    />
+      content="{{description}}"
+    /> -->
 
     <!-- CSS Reset Styles -->
     <style>
@@ -228,27 +228,11 @@
       header {
         padding: var(--space--1-5);
         border-bottom: var(--border);
+        text-align: center;
       }
 
       header > h1 {
         line-height: var(--space--3);
-      }
-
-      header > .top {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      header > .top > .date {
-        font-size: 14px;
-        font-weight: bold;
-      }
-
-      header > .intro {
-        padding-top: var(--space--0-5);
-        font-size: 16px;
       }
 
       section {
@@ -257,6 +241,10 @@
         padding-top: var(--space--2);
         padding-bottom: var(--space--3);
         border-bottom: var(--border);
+      }
+
+      section > .post-item {
+        padding-bottom: var(--space--1);
       }
 
       section > p {
@@ -271,7 +259,7 @@
         align-items: center;
         justify-content: center;
         gap: var(--space--2);
-        padding-top: var(--space--0-5);
+        padding-top: var(--space--1);
         padding-bottom: var(--space--0-5);
       }
 
@@ -388,31 +376,39 @@
       }
     </style>
 
-    <title>Markdown test post</title>
+    <title>Posts</title>
   </head>
   <body>
     <!-- Header Section -->
     <header>
       <!-- Main Header Text -->
-      <div class="top">
-        <p class="date">Feb 14, 2024</p>
-        <a href="#">All Posts</a>
-      </div>
-      <h1>Markdown test post</h1>
-      <p class="intro">This is a basic markdown test post</p>
+      <h1>Posts</h1>
+      <p>My Personal Blog</p>
+
+      <!-- Header Nav -->
+      <nav>
+        <a href="/">Home</a>
+        <a href="https://www.github.com/sgolovine">Github</a>
+        <a href="https://www.linkedin.com/in/SunnyGolovine">Linkedin</a>
+        <a href="mailto:sunny@golovinemail.org">Email</a>
+      </nav>
     </header>
 
     <!-- About Me Section -->
     <section>
-      <p>This is a basic markdown test post.</p>
-
+      <div class="post-item">
+        <a href="/post/post-1">Post 1</a>
+      </div>
+      <div class="post-item">
+        <a href="/post/post-2">Post 2</a>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">All Posts</a>
+        <a href="/">Home</a>
+        <a href="/posts">All Posts</a>
         <a href="https://github.com/sgolovine">Github</a>
         <a href="https://www.linkedin.com/in/SunnyGolovine">Linkedin</a>
         <a href="mailto:sunny@golovinemail.org">Email</a>
